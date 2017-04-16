@@ -1,0 +1,46 @@
+binary search
+input is sorted array
+mid kad k search kro
+runtime complexity (log n base 2)
+
+Strings 
+string - array of characters
+char str1[] = "Hello World"		str1 is not valid		str1[1] valid
+char *str2 = "Hello World"		str2++ is valid			str2[1] valid
+
+ASCII value of NULL is 0
+
+void strcpy(char *s, char *t)		// currently at s copy to t
+{
+    int i = 0;
+	while((t[i] = s[i]) != '\0')		//will copy it properly with null character
+	{
+	    i++;
+	}
+}
+
+// another method
+while((*t = *s) != '\0')
+{
+    t++; s++;
+}
+
+// another nd better
+while((*t++ = *s++) != '\0')
+;
+
+// best 
+while(*t++ = *s++)
+;
+
+
+q1. binary search using iterative approach
+q2. binary search using recursive approach
+q3. array has been shifted n times. search element keeping complexity as O(log n)
+q4. write custom code for strcat
+q5. strcpy, strncat, strncmp
+q6. int strend(char *s1, char *s2)
+    {
+	    return 1 if s2 occurs at the end of s1
+		else return 0
+    }

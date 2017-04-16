@@ -1,0 +1,50 @@
+modulus
+7 % 3 = -1, 2
+result = -1
+b = 3
+
+result = result<0 ? result+b : result
+
+5 is congruent with 10 when taken by mod 5
+5 mod 5 = 10 mod 5
+
+Quotient Remainder Theorem
+A = Q - B + R
+0 <= R < B
+
+(A+B) mod C = ( (A mod C) + (B mod C) ) mod C
+same is for - and *
+
+(A^B) mod C = ( (A mod C)^B ) mod C
+you can also find ( A ^ (B/2) )
+
+powmod( int a, int b, int i)
+{
+    int result = powmod(a, b/2, i)
+    if(b % 2)
+    {
+        result = a * result * result
+    }
+    else
+    {
+        result = result * result
+    }
+}
+
+result = ( (a % b) * (result % c) * (result * c) ) % c
+
+Q. how to find greatest common divisor (gcd)
+a, b where b > a
+
+gcd(int a, int b)
+{
+    b mod a = 0
+        return a
+    gcd(a, b/a)
+}
+this function does
+b = q0 * a + r0
+a = q1 * r0 + r1
+r0 = q2 * r1 + r2
+|  |  |  |  |  | 
+r(n-1) = q(n+1) * r(n) + 0

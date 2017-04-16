@@ -1,0 +1,85 @@
+Stack    // it goes down
+Heap    // it goes up
+Static
+Constants
+Program Code
+
+cant get address of constants
+
+int *p = &c   //gets the address of c
+p++    //goes to the next address where c is stored
+
+calloc initialises to 0 value
+
+int *p = (int *)malloc(10 * sizeof(int));
+
+int *p = &a[0];
+int *q = &a[2];
+q - p    //will return elements between p nd q
+
+------------
+foo()
+{
+  int a[]
+  foo1(a)
+}
+
+foo1(int x[])    //here x is pointer to array a and can also be written as foo1(int *x)
+{
+  x++
+}
+
+------------
+char *a = "Hello"    // it is a string literal    // a is a pointer containing constant hello   //cant use a++ or a[1]='z'
+char p[] = "Hello"    // p++ will give error
+char a* = p    // now we can use a++
+
+------------
+char *s[5]    //array of pointers to char type
+int *i[4]    //array of pointer to int
+
+------------
+char *s[3]
+s[0] -> "xyz"
+s[1] -> "bac"
+s[2] -> "abd"
+
+to sort them we should do like
+s[2] -> "xyz"
+s[1] - > "bac"
+s[0] -> "abd"
+
+change the pointer to the strings rather than changing the array
+
+------------
+char s[3][4] is less efficient than char *s[3]
+*s[3] can store variable length strings
+
+char *s[3] = { "hello", "hi", "xyz"}
+
+------------
+char c[5][3]
+foo(c)
+
+foo(char c[5][3])    // this can also be written as foo(char c[][3]) OR foo(char *c[3])
+{
+    c++    //this will now point to second string and not to the first line second alphabet
+}
+
+------------
+what happens when you type www.facebook.com
+
+we send a GET request then is url then is protocol
+there will be some HEADER REQUEST eg "content-type" : "text/html"
+
+when we login that is POST REQUEST with username and password sent
+Base64 Encoding is used to encrypt the username and password
+
+A - Z
+a - z
+0 - 9
++
+=
+only these can be there in base64 encoding and they can be represented in 6 bits each
+so if we send "helllo" it will have 6 chars each of 8 bits
+we have to convert it to 8 chars of 6 bits each

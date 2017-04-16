@@ -1,0 +1,35 @@
+Command Line Arguments
+
+int main(int argc, char argv[])
+input - echo hello, world
+in c/c++ argc is 3
+in java argc is 2
+
+q1. given numbers as command line arguments print their sum	cmd_arg_sum.c
+
+q2. diff between *++argv[0] and *(++argv[0])	  cmd_argv++.c
+
+To convert char into desired data type
+char *s = "15"
+sscanf(s, "%d", &n)
+
+you can also use atoi(), atof()
+
+q3. try using sscanf, fscanf, sprintf, fprintf		char_to_int.c
+
+q4. define them all
+    int *f()    funtion which returns pointer to an int
+    int (*pf)()
+    int (*x)[13]
+    int *x[13]
+    char ( * ( * x () ) [] ) ()
+
+q5. lexicographically sort		cmd_lexical.c
+    if no command line argument then sort simply
+    if -n then sort for numbers
+    if -r then sort for numbers in reverse
+    if -f then ignoring case
+
+Function Pointer
+1. function is not a variable
+
