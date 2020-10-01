@@ -31,22 +31,23 @@ struct node* create(struct node *beg)
 	    temp->next = new;
 	    scanf("%d", &data);
     }
-    return beg;
+    return;
 }
 
 void display(struct node *beg)
 {
     while(beg != NULL)
     {
-        printf("%d \n", beg->data);
-	beg = beg->next;
+        temp = beg;
+	printf("%d \n", temp->data);
+	temp = temp->next;
     }
 } 
 
 int main()
 {
     struct node *beg = NULL;
-    beg = create(beg);
+    create(beg);
     display(beg);
   
 
